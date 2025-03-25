@@ -319,7 +319,7 @@ body {
     text-decoration: none;
     border-radius: 25px;
     transition: all 0.3s ease;
-    min-width: 100px;
+    width: 90px;
     text-align: center;
 }
 
