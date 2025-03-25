@@ -291,7 +291,13 @@ body {
 }
 
 .project-content {
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-description {
+    flex-grow: 1;
 }
 
 .project-content h3 {
@@ -304,8 +310,8 @@ body {
 .project-links {
     display: flex;
     gap: 1rem;
-    justify-content: flex-start;
-    margin-top: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .project-link {
@@ -320,7 +326,6 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease;
     width: 90px;
-    text-align: center;
 }
 
 .project-link:hover {
