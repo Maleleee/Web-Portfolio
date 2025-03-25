@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Allen</h1>
+            <p class="typing-text">Computer Science Student | Software Developer | Problem Solver | Tech Enthusiast</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="#contact" class="cta-button secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionate 4th-year Computer Science student at FEU - Institute of Technology, specializing in Flask, Python, and machine learning. Skilled in web development, automation, and network security. Seeking an internship to apply my expertise and contribute to meaningful projects.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/portfoliopicture.jpg" alt="Allen Takahashi" class="profile-picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Genesis Web (Thesis Project)</h3>
+                        <p>A Flask-based demo website integrating an LSTM-based Machine Learning model to detect anomalies and security threats in real-time. Features user activity tracking and an admin dashboard.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Maleleee/GenesisWeb" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>SEO-Sensei</h3>
+                        <p>A Python Flask-based SEO analysis tool providing in-depth insights into website performance, mobile responsiveness, and SEO metrics with AI-powered recommendations.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Maleleee/SEO-Sensei" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Sentiment Analyzer</h3>
+                        <p>A VADER-based sentiment analysis tool for text processing, providing accurate sentiment scores and analysis for various types of text content.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Maleleee/Sentiment-Analyzer_VADER" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>TensorFlow</li>
+                        <li>Keras (LSTM, RNN)</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Flask</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>SQLite</li>
+                        <li>SQLAlchemy</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>Wireshark</li>
+                        <li>Postman</li>
+                        <li>NPM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>202111055@fit.edu.ph</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+63 953 617 1547</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>San Mateo, Rizal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Allen Takahashi. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Maleleee" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/allen-takahashi-050a5b322/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
