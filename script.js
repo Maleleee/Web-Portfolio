@@ -42,27 +42,43 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Initialize EmailJS
+(function() {
+    emailjs.init("8AxwC2yCfg6X5oA6s"); // Add your EmailJS public key here
+})();
+
 // Form Submission with Animation
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitButton = contactForm.querySelector('.submit-button');
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitButton.disabled = true;
 
-        // Simulate form submission (replace with actual form submission)
-        setTimeout(() => {
+        try {
+            // Send email using EmailJS
+            await emailjs.sendForm(
+                'service_irhvjjm', // Add your EmailJS service ID here
+                'template_pfah09f', // Add your EmailJS template ID here
+                contactForm
+            );
+
             submitButton.innerHTML = '<i class="fas fa-check"></i> Sent!';
             submitButton.style.background = '#27ae60';
             contactForm.reset();
-            
+        } catch (error) {
+            submitButton.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+            submitButton.style.background = '#e74c3c';
+            console.error('Error sending email:', error);
+            alert('Failed to send message. Please try again later.');
+        } finally {
             setTimeout(() => {
                 submitButton.innerHTML = 'Send Message';
                 submitButton.style.background = '';
                 submitButton.disabled = false;
-            }, 2000);
-        }, 1500);
+            }, 3000);
+        }
     });
 }
 
