@@ -44,7 +44,7 @@ window.addEventListener('scroll', () => {
 
 // Initialize EmailJS
 (function() {
-    emailjs.init("8AxwC2yCfg6X5oA6s"); // Add your EmailJS public key here
+    emailjs.init(config.emailjs.publicKey);
 })();
 
 // Form Submission with Animation
@@ -59,8 +59,8 @@ if (contactForm) {
         try {
             // Send email using EmailJS
             await emailjs.sendForm(
-                'service_irhvjjm', // Add your EmailJS service ID here
-                'template_pfah09f', // Add your EmailJS template ID here
+                config.emailjs.serviceId,
+                config.emailjs.templateId,
                 contactForm
             );
 
